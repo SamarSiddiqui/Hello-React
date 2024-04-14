@@ -1,0 +1,26 @@
+{
+  "name": "hello-react",
+  "version": "1.0.0",
+  "description": "hello react",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamarSiddiqui/Hello-React.git"
+  },
+  "keywords": [
+    "samar",
+    "adeeb"
+  ],
+  "author": "Samar Siddiqui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamarSiddiqui/Hello-React/issues"
+  },
+  "homepage": "https://github.com/SamarSiddiqui/Hello-React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
