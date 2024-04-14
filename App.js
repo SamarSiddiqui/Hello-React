@@ -1,8 +1,8 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-let heading = React.createElement('h1',{},'Hello From React')
+let heading = React.createElement('h1',{},'Hello From React💕')
 
-let root = ReactDOM.createRoot(document.getElementById('root'))
-
+const root = ReactDOM.createRoot( document.getElementById("root")); 
+// const oot = createRoot(rootElement);
 root.render(heading)
