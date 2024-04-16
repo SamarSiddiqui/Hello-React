@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "hello react",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SamarSiddiqui/Hello-React.git"
   },
-  "keywords": [
-    "samar",
-    "adeeb"
-  ],
+  "keywords": [],
   "author": "Samar Siddiqui",
   "license": "ISC",
   "bugs": {
