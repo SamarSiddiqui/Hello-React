@@ -59,11 +59,12 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
 
 .rescard{
-    width: 170px;
-    height: 250px;
+    width: 190px;
+    height: 280px;
     border: 2px solid green;
     border-radius: 5px;
     margin: 5px;
@@ -76,11 +77,18 @@
 .resPhoto{
     width: 90%;
     height: 150px;
-    margin: auto;
-    background-color: lightcoral;
+    /* margin: auto; */
+    /* background-color: lightcoral; */
+    margin:5px 10px ;
 }
-
+.resPhoto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 .rescard > h4 {
     text-align:  center;
     font-weight: bold;
+    line-height: 1.2;
 }
