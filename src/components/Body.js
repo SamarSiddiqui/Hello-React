@@ -1,12 +1,16 @@
-import Rescards from "./Rescards";
+import Rescards from "./Rescards"; 
 import resList from "../utils/mock";
+
+// console.log(resList);
 let Body = ()=>{
+   
+   
     return <div className="resContainer ">
-       <div className="searchBar">
-         <h2>Search Bar</h2>
+       <div className="filter">
+        
        </div>
        <div className="resArea">
-    {
+    {  
       resList.map((restaurant,index)=>(
        <Rescards key={index} resData={restaurant}/>
       
