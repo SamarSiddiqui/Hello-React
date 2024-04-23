@@ -4,7 +4,7 @@ import {Img_Url} from "../utils/constants"
 let Rescards = (props)=>{
     let {resData} = props
     let {name,cuisines,locality,costForTwoString,avgRating
-      ,cloudinaryImageId}  = resData?.data
+      ,cloudinaryImageId}  = resData?.info
   
     return <div className="rescard">
       <div className="resPhoto">
