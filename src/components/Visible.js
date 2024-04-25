@@ -6,11 +6,8 @@ let Body = ()=>{
   
   let [listofRes,setListOfRes] = useState([])
   let [filteredListofRes,setFilteredListOfRes] = useState([])
-  const [loading, setLoading] = useState(true);
-
 
   const [searchText,setSearchext] = useState("")
-  // console.log(listofRes);
 
   const fetchData = async ()=> { 
     const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5/?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
@@ -18,7 +15,7 @@ let Body = ()=>{
     const apiData = await response.json()
     setListOfRes(apiData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredListOfRes(apiData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    setLoading(false);
+    // setLoading(false);
 
   }
   useEffect(()=>{
@@ -33,15 +30,7 @@ let Body = ()=>{
         setListOfRes(filterdList)
   }
 
-  // const searchFilter = ()=> {
-   
-  // }
-  //conditional rendering
 
-  // if (listofRes.length===0) {
-  //  return <Shimmmer />
-  // }
-  
   
   return listofRes?.length === 0 ?(
     <Shimmmer />

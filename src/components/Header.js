@@ -1,9 +1,9 @@
 import imageSrc from "../../logo.png"
 import { useState } from "react"
 let Header = ()=>{
-      let [btnName,setBtnName] = useState('LogIn')
-
-    return <div className="header">        
+   
+    let [logState,setlogState] = useState("LogIn")
+    return <div className="header">         
          <div className="logo">
          <img src= {imageSrc} alt="Logo" />
            </div>      
@@ -12,14 +12,16 @@ let Header = ()=>{
            <li>About</li>
            <li>Contact</li>
            <li>Cart</li>
-           <button className="login" onClick={()=>{
-            btnName==="Login"
-            ? setBtnName('Logout')
-            : setBtnName('Login')
+           <li>
+            <button style={{padding:"10px 20px"}}
+            onClick={()=>{
+             logState==="LogIn"
+             ? setlogState("LogOut")
+             : setlogState("LogIn")
+            }}
+            >{logState}</button>
+           </li>
           
-           console.log(btnName);
-          
-          }}>{btnName}</button>
          </ul>
            </div>      
    

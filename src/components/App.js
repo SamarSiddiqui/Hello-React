@@ -6,7 +6,6 @@ import Body from "./Body"
 
 
 
-
 let AppLayout = ()=>{
  return <div className="main">
       <Header />

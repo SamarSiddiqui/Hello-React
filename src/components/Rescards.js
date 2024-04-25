@@ -1,6 +1,5 @@
 import {Img_Url} from "../utils/constants"
 
-
 let Rescards = (props)=>{
     let {resData} = props
     let {name,cuisines,locality,costForTwoString,avgRating
