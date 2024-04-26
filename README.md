@@ -1,8 +1,8 @@
 "# Hello-React" 
 
-
-### Header => 1) logo 2) About,Contact,Cart
-### Body 1) SearchBar 2) FoodContainer 2.1 ResCards
+### Planning
+**Header => 1) logo 2) About,Contact,Cart**
+**Body 1) SearchBar 2) FoodContainer 2.1 ResCards**
 
 
 
