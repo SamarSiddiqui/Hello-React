@@ -1,19 +1,19 @@
 "# Hello-React" 
 
+### Planning
+**Header => 1) logo 2) About,Contact,Cart**
+**Body 1) SearchBar 2) FoodContainer 2.1 ResCards**
 
-Header 1 logo 2 About,Contact,Cart
- 1 SearchBar 2 FoodContainer 2.1 ResCards
 
 
+### - Two types of Import And Export
 
-- Two types of Import And Export
-
-Ist-Default Export/Import (Single File)
-
+**Ist-Default Export/Import (Single File)**
+- Ist Default Export
 export default Header;
 import Header from "./path
 
-IInd - Named Import/Export (Multiple Files)
+**IInd - Named Import/Export (Multiple Files)**
 export const variableName1 = "value"
 export const variableName2 = "value"
 
