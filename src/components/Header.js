@@ -1,8 +1,11 @@
 import imageSrc from "../../logo.png"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 let Header = ()=>{
    
     let [logState,setlogState] = useState("LogIn")
+      
+    
 
     return <div className="header">         
          <div className="logo">
@@ -11,8 +14,9 @@ let Header = ()=>{
          <div className="options">
          <ul>
          
-           <li>About</li>
-           <li>Contact</li>
+           <li><Link to="/">Home</Link></li>
+           <li><Link to="/about">About</Link></li>
+           <li><Link to="/contact">Contact</Link></li>
            <li>Cart</li>
            <li>
             <button style={{padding:"10px 20px"}}

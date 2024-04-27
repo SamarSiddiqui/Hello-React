@@ -1,9 +1,17 @@
-.profile{
+html{
     height: 90vh;
-    border: 10px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgb(123, 123, 223);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.countBtn{
+    padding: 5px 20px ;
+}
+
+.minusBtn{
+    padding: 5px 20px;
+    margin-left: 10px;
 }

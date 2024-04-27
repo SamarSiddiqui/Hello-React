@@ -1,23 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom/client"
+import { Greeting } from "./CountGreeting"
 
+let Mode = ()=> {
+  let [mode,setMode] = useState()
+  const [state,setState] = useState('Light')
+  return (
+    <>
+    <h1 style={mode}>Hello From React.</h1> 
+    <button className="minusBtn"
+        onClick={()=> {
+            if(state==='Light'){
+              setState('Dark')
+              setMode({color:"black"})
+              
+            } else{
+              setState('Light')
+              setMode({color:"white"})
+            }
+        }}
+        >{state}
+        
+        </button>   
+    </>
+  )
+ 
+}
+
+ 
 
 let root = ReactDOM.createRoot(document.getElementById('root'))
-let Child = (props)=> {
-  return (
-    <div>
-      <h1>{props.greet}</h1>
-      <h1>{props.heading}</h1>
-
-    </div>
-  )
-}
-let Parent = ()=> {
-  return (
-    <div className="profile">
-      < Child greet="Salam," heading="Hello  From Props" />
-    </div>
-  )
-}
-
-root.render(<Parent/>)
+root.render(<Mode />)

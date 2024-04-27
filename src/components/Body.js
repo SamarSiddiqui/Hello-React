@@ -1,10 +1,8 @@
 import Rescards from "./Rescards"; 
 import { useState,useEffect } from "react";
-import { jsx } from "react/jsx-runtime";
-import Shimmmer from "./Shimmer";
+ import Shimmmer from "./Shimmer";
 let Body = ()=>{
   let [listofRes,setListOfRes] = useState([])
-  console.log(listofRes);
   let [filteredRestro, setFilteredRestro] = useState([])
   let [searchText,setSearchText] = useState("")
     useEffect(()=> { 
