@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 let Header = ()=>{
    
     let [logState,setlogState] = useState("LogIn")
-      
     
 
     return <div className="header">         

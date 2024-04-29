@@ -1,8 +1,10 @@
 import Rescards from "./Rescards"; 
 import { useState,useEffect } from "react";
  import Shimmmer from "./Shimmer";
+ 
 let Body = ()=>{
   let [listofRes,setListOfRes] = useState([])
+  // console.log(listofRes);
   let [filteredRestro, setFilteredRestro] = useState([])
   let [searchText,setSearchText] = useState("")
     useEffect(()=> { 
@@ -10,15 +12,18 @@ let Body = ()=>{
     },[])
     
     const fetchData =  async () => {
-     let response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5/?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
+     let response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=26.87560&lng=80.91150")
       
      let apiData = await response.json()
-     const restaurants = apiData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    //  console.log(apiData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+    //  const restaurants = apiData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+
+    const restaraunts = apiData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
 
     
 
-    setListOfRes(restaurants)
-    setFilteredRestro(restaurants)
+    setListOfRes(restaraunts)
+    setFilteredRestro(restaraunts)
     
     } 
   
