@@ -1,6 +1,7 @@
 import Rescards from "./Rescards"; 
 import { useState,useEffect } from "react";
  import Shimmmer from "./Shimmer";
+ import {Link} from "react-router-dom";
  
 let Body = ()=>{
   let [listofRes,setListOfRes] = useState([])
@@ -72,7 +73,10 @@ let Body = ()=>{
         
     {  //Cards rendered on screen are from here 
       filteredRestro?.map((restaurant)=>(
-        <Rescards key={restaurant.info.id} resData={restaurant} />
+        <Link key={restaurant.info.id}
+        to={"restaurants/"+ restaurant.info.id}>
+        <Rescards  resData={restaurant} />        
+        </Link>
        
      ))
     }
