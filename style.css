@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fbf7f7;
 }
 
 .main{
@@ -67,13 +69,46 @@
 }
 
 .rescard{
-    width: 190px;
+    width: 300px;
     /* height: 280px; */
     /* padding: 1em 0.5em; */
     border-radius: 5px;
     margin: 5px;
-    border: 2px solid green;
-    padding-bottom: 1em;
+    /* border: 2px solid green; */
+    padding-bottom: 2em;
+    color: black;
+    text-decoration: none;
+}
+
+.rescard:hover{
+    border: 1px solid red;
+    cursor: pointer;
+}
+.resPhoto{
+    width: 95%;
+    height: 150px;
+    margin:0 auto ;
+    margin-top: 5px;
+    object-fit: contain;
+}
+.resDetails{
+    margin: 0 auto;
+    width: 93%;
+}
+
+.resDetails>*{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+.resRatings{
+    background-color: rgb(19, 130, 19);
+    padding: 1px 3px;
+    border-radius: 5px;
+}
+.middleDetails>h4,.bottomDetails>h4{
+ font-weight: 400;
+ color: rgb(76, 73, 73);
 }
 .shimmer-container {
     width: 100%;
@@ -92,16 +127,6 @@
     position: relative;
     overflow: hidden;
 }
-.rescard:hover{
-    border: 1px solid red;
-    cursor: pointer;
-}
-.resPhoto{
-    width: 90%;
-    height: 150px;
-    margin:5px 10px ;
-}
-
 .shimmerPhoto{
     width: 90%;
     height: 150px;
@@ -152,15 +177,49 @@
     padding: 5px 10px;
 }
 
-.menu{
-    width: 80%;
+/* .menu{
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+} */
+.menu-items{
+    width: 60%;
+    margin: 0 auto;
 }
 
- .left-menu h4{
-    border: 1px solid grey;
-    margin: 2px;
-    text-align: center;
+.menuHeading{
+    /* font-weight: 800; */
+    /* padding-left: 0.5em; */
+    
+}
+
+.top-menu{
+    /* border: 3px solid red; */
+    margin: 1em;
+    border-radius:15px;
+    /* background-color: #ff0202; */
+    
+}
+
+.top{
+    display: flex;
+    gap: 30px; 
+    font-size: 17px;   
+}
+
+
+.middle>*{
+    margin-top: 2px;
+}
+.bottom{
+    /* border: 3px solid rgb(0, 0, 0); */
+    color: grey;
+    padding-left: 10px;
+
+}
+
+.resItems{
+    background-color: #e3dfdf;
+    padding: 1em 2em;
+    margin: 0.5em;
+    list-style: none;
 }

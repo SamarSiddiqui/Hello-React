@@ -70,11 +70,16 @@ let Body = ()=>{
 
        
        <div className="resArea">
-        
-    {  //Cards rendered on screen are from here 
+
+        {// Initially
+        /* {filteredRestro.map((restaurant)=> (
+          <Rescards key={restaurant.data.id} resData={restaurant}/>
+        ))} */}
+    {  //Cards rendered on screen are from here & key will always be with the parent element. 
       filteredRestro?.map((restaurant)=>(
         <Link key={restaurant.info.id}
-        to={"restaurants/"+ restaurant.info.id}>
+        to={"restaurants/"+ restaurant.info.id}
+        style={{textDecoration:"none"}}>
         <Rescards  resData={restaurant} />        
         </Link>
        

@@ -33,8 +33,8 @@ let appRouter = createBrowserRouter([
         path:"/about",
         element:<About />
       },
-      {
-        path:"restaraunts/:resId",
+      { 
+        path:"restaurants /:resId",
         element: <ResMenu />
       }
     ],
@@ -50,7 +50,7 @@ let appRouter = createBrowserRouter([
   }
 ])
 
-
+ 
 
 let root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<RouterProvider router={appRouter}/>)
