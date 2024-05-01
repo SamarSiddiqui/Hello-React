@@ -223,3 +223,8 @@
     margin: 0.5em;
     list-style: none;
 }
+
+.user-box{
+    border: 2px solid gold;
+    padding: 2em;
+}
