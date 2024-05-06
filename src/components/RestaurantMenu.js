@@ -21,6 +21,8 @@ const RestaurantMenu = ()=> {
     const restaurants = resData.data
     setresInfo(restaurants)
 }
+
+
     if(resInfo === null) return <Shimmmer />
     
     const {name,cuisines,costForTwoMessage,locality,totalRatingsString,city,avgRating,sla,feeDetails} = resInfo?.cards[2]?.card?.card?.info 
