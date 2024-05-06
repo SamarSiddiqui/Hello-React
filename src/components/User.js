@@ -15,13 +15,24 @@ class UserClass extends React.Component{
     }
      
     async componentDidMount() {
-     const response = await fetch("https://api.github.  com/users/SamarSiddiqui")
+     const response = await fetch("https://api.github.com/users/SamarSiddiqui")
      const data  = await response.json() 
      console.log(data);
+     
+    this.timer = setInterval(() => {
+        console.log('Cdmount');
+        
+    }, 1000);
+     
+    }
 
-     this.setState({
-        userInfo : data
-     })
+    componentDidUpdate(){
+        console.log('cdupdate');
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.timer)
+        console.log("cwillUnmount");
     }
     render() { 
         
