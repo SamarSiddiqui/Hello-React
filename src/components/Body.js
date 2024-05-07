@@ -2,23 +2,25 @@ import Rescards from "./Rescards";
 import { useState,useEffect } from "react";
  import Shimmmer from "./Shimmer";
  import {Link} from "react-router-dom";
+ import { Body_Url } from "../utils/constants";
+ import useResBody from "../utils/useResBody";
+ import useOnlineStatus from "../utils/useOnlineStatus";
  
 let Body = ()=>{
   let [listofRes,setListOfRes] = useState([])
-  // console.log(listofRes);
   let [filteredRestro, setFilteredRestro] = useState([])
   let [searchText,setSearchText] = useState("")
+
+//  let {listofRes,filteredRestro} = useResBody()
     useEffect(()=> { 
-    fetchData()
+    fetchData() 
     },[])
     
     const fetchData =  async () => {
-     let response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=26.87560&lng=80.91150")
+     let response = await fetch(Body_Url)
       
      let apiData = await response.json()
-    //  console.log(apiData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-    //  const restaurants = apiData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-
+   
     const restaraunts = apiData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
 
     
@@ -28,7 +30,7 @@ let Body = ()=>{
     
     } 
   
-
+  
 
   
   const filterTopRated = ()=> {

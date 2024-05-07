@@ -1,11 +1,13 @@
 import imageSrc from "../../logo.png"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import useOnlineStatus from "../utils/useOnlineStatus"
 let Header = ()=>{
    
     let [logState,setlogState] = useState("LogIn")
     
-
+   let onlineStatus = useOnlineStatus()
+   console.log(onlineStatus);
     return <div className="header">         
          <div className="logo">
          <img src= {imageSrc} alt="Logo" />

@@ -6,3 +6,5 @@ export let Logo_Url = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lo
 
 
 export let Menu_Url = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.87560&lng=80.91150&restaurantId="
+
+export let Body_Url = "https://www.swiggy.com/mapi/homepage/getCards?lat=26.87560&lng=80.91150"
