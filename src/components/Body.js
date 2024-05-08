@@ -31,7 +31,12 @@ let Body = ()=>{
     } 
   
   
-
+    let onlineStatus = useOnlineStatus()
+   if(onlineStatus===false) {
+     return(
+       <h1>Ahh Ahh, I Guess You Lost The Internet Connection. 🥺🥺</h1>
+     )
+   }
   
   const filterTopRated = ()=> {
     let filterdList = listofRes.filter((res)=>
