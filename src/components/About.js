@@ -12,10 +12,10 @@ export class About extends React.Component{
     render() {
 
         return ( 
-            <>
+            <div >
             <h1>Hello From Class Component</h1>
             <UserClass/>
-            </>
+            </div>
         )
     }
 }

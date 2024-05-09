@@ -55,10 +55,10 @@ let Body = ()=>{
        <div className="filter">
         <div className="search">
         
-         <input className="searchBox" value={searchText} 
+         <input className="border-2 mx-5 border-red-300" value={searchText} 
          onChange={(e)=>{setSearchText(e.target.value)}}
          />
-         <button className="searchBtn" 
+         <button className=" bg-slate-500 px-3 py-1 rounded-lg" 
          onClick={()=>{
          const newFilteredRestro= listofRes.filter((res)=>(res.info.name.toLowerCase().includes(searchText.toLowerCase())))
          
@@ -67,16 +67,16 @@ let Body = ()=>{
           
           >Search</button>
          
-        </div> 
-       <button className="filter-btn" 
+       <button className=" bg-cyan-300 px-3 py-1 rounded-lg mx-10 my-3" 
        onClick={filterTopRated}>Top Rated Restaurant
        </button>
+        </div> 
          
         
         </div>
 
        
-       <div className="resArea">
+       <div className="flex flex-wrap">
 
         {// Initially
         /* {filteredRestro.map((restaurant)=> (

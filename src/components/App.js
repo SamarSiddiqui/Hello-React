@@ -12,7 +12,7 @@ import { lazy, Suspense } from "react"
 const Grocery = lazy(()=>import("./Grocery"))
 
 const AppLayout = ()=>{
- return <div className="main">
+ return <div className=" w-full h-full">
       <Header />
       <Outlet />
       <h1>Hello💕</h1>

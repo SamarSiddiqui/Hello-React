@@ -4,9 +4,10 @@ let Rescards = (props)=>{
     let {resData} = props
     let {name,cuisines,locality,costForTwo,avgRating
       ,cloudinaryImageId,sla}  = resData?.info
-    return <div className="rescard">
-      <div className="resPhoto">
-          <img src={Img_Url + cloudinaryImageId}/>
+      
+    return <div className="w-80 m-1  p-[2px]   rounded-lg border-r-4 bg-slate-200">
+      <div className="w-11/12 h-40 my-0 mx-auto mt-1 border-4">
+          <img className="w-full h-full rounded-lg  " src={Img_Url + cloudinaryImageId}/>
       </div>
 
       <div className="resDetails">

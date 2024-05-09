@@ -1,4 +1,8 @@
-*{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,14 +10,13 @@
     background-color: #fbf7f7;
 }
 
-.main{
+/* .main{
     width: 100%;
     height: 100%;
-}
+} */
 
  
-.header{
-    /* height: 70px; */
+/* .header{
     border-bottom: 4px solid rgb(42, 38, 38);
     display: flex;
     justify-content: space-between;
@@ -43,14 +46,10 @@
     padding: 15px 20px;
     list-style-type: none;
 }
+ */
 
-/* .resContainer{
-    width: 100%; 
-     height: 100%; 
-} */
 
 .filter{
-    /* height: 50px; */
     display: flex;
     border: 2px solid gold;
     width: 100%;
@@ -60,40 +59,36 @@
     padding: 10px;
     margin: 3px 20px;
 }
-.resArea{
-    /* width: 100%; */
-    /* height: 100%; */
+/* .resArea{
     display: flex;
     flex-wrap: wrap;
-    /* border: 2px solid red; */
-}
+} */
 
-.rescard{
+/* .rescard{
     width: 300px;
-    /* height: 280px; */
-    /* padding: 1em 0.5em; */
     border-radius: 5px;
     margin: 5px;
-    /* border: 2px solid green; */
     padding-bottom: 2em;
     color: black;
     text-decoration: none;
-}
+} */
 
 .rescard:hover{
     border: 1px solid red;
     cursor: pointer;
 }
-.resPhoto{
+
+/* .resPhoto{
     width: 95%;
     height: 150px;
     margin:0 auto ;
     margin-top: 5px;
     object-fit: contain;
-}
+} */
 .resDetails{
     margin: 0 auto;
     width: 93%;
+   
 }
 
 .resDetails>*{
@@ -122,8 +117,8 @@
     background-color: #b2adad;
     border-radius: 5px;
     margin: 5px;
-    background-color: #f0f0f0; /* Adjust background color to match your design */
-    border-radius: 5px; /* Adjust according to your design */
+    background-color: #f0f0f0; 
+    border-radius: 5px; 
     position: relative;
     overflow: hidden;
 }
@@ -177,26 +172,20 @@
     padding: 5px 10px;
 }
 
-/* .menu{
+ .menu{
     margin: 0 auto;
     margin: 0 auto;
-} */
+} 
 .menu-items{
     width: 60%;
     margin: 0 auto;
 }
 
-.menuHeading{
-    /* font-weight: 800; */
-    /* padding-left: 0.5em; */
-    
-}
+
 
 .top-menu{
-    /* border: 3px solid red; */
     margin: 1em;
     border-radius:15px;
-    /* background-color: #ff0202; */
     
 }
 
@@ -211,7 +200,6 @@
     margin-top: 2px;
 }
 .bottom{
-    /* border: 3px solid rgb(0, 0, 0); */
     color: grey;
     padding-left: 10px;
 
@@ -227,4 +215,4 @@
 .user-box{
     border: 2px solid gold;
     padding: 2em;
-}
+}  
