@@ -216,3 +216,40 @@
     border: 2px solid gold;
     padding: 2em;
 }  
+
+.itemCard{
+    /* border: 1px solid red; */
+    /* width: 70%; */
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    border-bottom: 1px solid rgb(219, 215, 215);
+    padding: 5px;
+}
+
+.itemList{
+    padding: 5px 10px;
+}
+.itemDescription{
+    margin-top: 10px;
+    max-width: 500px;
+    line-height: 17px;
+    color: #b2adad;
+
+}
+.itemImage{
+    width: 250px;
+    height: 150px;
+}
+
+.itemImage > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.itemList >.itemDescription{
+    width: 30x;
+}

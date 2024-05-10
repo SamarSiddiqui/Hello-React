@@ -1,4 +1,4 @@
-import Rescards from "./Rescards"; 
+import Rescards, {promotedRestaurant} from "./Rescards"; 
 import { useState,useEffect } from "react";
  import Shimmmer from "./Shimmer";
  import {Link} from "react-router-dom";
@@ -10,12 +10,11 @@ let Body = ()=>{
   let [listofRes,setListOfRes] = useState([])
   let [filteredRestro, setFilteredRestro] = useState([])
   let [searchText,setSearchText] = useState("")
-
+ let PromotedRestro = promotedRestaurant(Rescards)
 //  let {listofRes,filteredRestro} = useResBody()
     useEffect(()=> { 
     fetchData() 
     },[])
-    
     const fetchData =  async () => {
      let response = await fetch(Body_Url)
       
@@ -87,7 +86,8 @@ let Body = ()=>{
         <Link key={restaurant.info.id}
         to={"restaurants/"+ restaurant.info.id}
         style={{textDecoration:"none"}}>
-        <Rescards  resData={restaurant} />        
+          {restaurant.info.promoted ? <PromotedRestro resData={restaurant}/> :<Rescards  resData={restaurant} />}
+                
         </Link>
        
      ))

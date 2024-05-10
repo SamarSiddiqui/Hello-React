@@ -7,7 +7,7 @@ let useRestroMenu = (resId)=> {
 
 useEffect(()=> {
     fetchMenu()
-})
+},[])
 
   const fetchMenu = async ()=> {
     const response = await fetch(Menu_Url+resId)

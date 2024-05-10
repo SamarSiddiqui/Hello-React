@@ -30,5 +30,14 @@ let Rescards = (props)=>{
     </div>
   }
 
+  export let promotedRestaurant = (Rescards)=>{
+   
+    return (props)=> {
+      return <div>
+        <label className="absolute bg-black text-white px-3 m-3 rounded-lg ">Promoted</label>
+        <Rescards {...props}/>
+      </div>
+    }
 
+  }
   export default Rescards;
