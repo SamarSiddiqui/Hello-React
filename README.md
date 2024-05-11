@@ -36,6 +36,28 @@ A: `React` is a JavaScript library for building User Interfaces whereas `ReactDO
 The react package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The react-dom package contains `ReactDOM.render()`, and in react-dom/server we have server-side rendering support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
 
 
+## Q: What is difference between `react.development.js` and `react.production.js` files via `CDN`?
+
+A: `Development` is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
+`Development build` is several times (maybe 3-5x) `slower` than the `production build`.
+
+## Q: What are `async and differ` attributes in `<script>` tag?
+
+A: `Async` - The async attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed as soon` as it is available (do not block HTML DOM construction during downloading process) and don’t wait for anything.
+
+### _Syntax_
+
+```
+<script async src="demo_async.js"></script>
+```
+
+`Defer` - The defer attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed after the page` has finished parsing(when browser finished DOM construction). The `defer attribute` tells the browser `not to wait for the script`. Instead, the browser will continue to process the HTML, build DOM.
+
+### _Syntax_
+
+```sh
+<script defer src="demo_defer.js"></script>
+```
 
 ### - Two types of Import And Export
 
