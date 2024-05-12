@@ -7,7 +7,6 @@ let Header = ()=>{
     let [logState,setlogState] = useState("LogIn")
     
    let onlineStatus = useOnlineStatus()
-   console.log(onlineStatus);
     return <div className="flex justify-between border-b-4">         
          <div className="w-28 h-12 m-0 p-1">
          <img className="w-full h-full object-cover" src= {imageSrc} alt="Logo" />
