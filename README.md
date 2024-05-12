@@ -36,7 +36,38 @@ A: `React` is a JavaScript library for building User Interfaces whereas `ReactDO
 The react package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The react-dom package contains `ReactDOM.render()`, and in react-dom/server we have server-side rendering support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
 
 
+## Q: What is difference between `react.development.js` and `react.production.js` files via `CDN`?
 
+A: `Development` is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
+`Development build` is several times (maybe 3-5x) `slower` than the `production build`.
+
+## Q: What are `async and differ` attributes in `<script>` tag?
+
+A: `Async` - The async attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed as soon` as it is available (do not block HTML DOM construction during downloading process) and don’t wait for anything.
+
+### _Syntax_
+
+```
+<script async src="demo_async.js"></script>
+```
+
+`Defer` - The defer attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed after the page` has finished parsing(when browser finished DOM construction). The `defer attribute` tells the browser `not to wait for the script`. Instead, the browser will continue to process the HTML, build DOM.
+
+### _Syntax_
+
+```sh
+<script defer src="demo_defer.js"></script>
+```
+
+## Q: Difference between a `Library and Framework`?
+
+A: A framework is a set of pre-written code that provides a structure for developing software applications. A library, on the other hand, is a collection of pre-written code that can be used to perform specific tasks.
+
+A `library` is a collection of packages that perform specific operations whereas a `framework` contains the basic flow and architecture of an application. The major difference between them is the complexity. Libraries contain a number of methods that a developer can just call whenever they write code. React js is library and Angular is Framework.
+
+The `framework` provides the flow of a software application and tells the developer what it needs and calls the code provided by the developer as required. If a `library` is used, the application calls the code from the library.
+
+------------------------------
 ### - Two types of Import And Export
 
 **Ist-Default Export/Import (Single File)**
