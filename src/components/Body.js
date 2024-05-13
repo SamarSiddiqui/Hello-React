@@ -1,12 +1,15 @@
 import Rescards, {promotedRestaurant} from "./Rescards"; 
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
  import Shimmmer from "./Shimmer";
  import {Link} from "react-router-dom";
  import { Body_Url } from "../utils/constants";
  import useResBody from "../utils/useResBody";
  import useOnlineStatus from "../utils/useOnlineStatus";
- 
+ import UserContext from "../utils/UserContext";
+
+
 let Body = ()=>{
+  let {setUserName,loginDetails} = useContext(UserContext)
   let [listofRes,setListOfRes] = useState([])
   let [filteredRestro, setFilteredRestro] = useState([])
   let [searchText,setSearchText] = useState("")
@@ -52,7 +55,7 @@ let Body = ()=>{
   return (
     <div className="resContainer ">
        <div className="filter">
-        <div className="search">
+        <div className="flex items-center">
         
          <input className="border-2 mx-5 border-red-300" value={searchText} 
          onChange={(e)=>{setSearchText(e.target.value)}}
@@ -65,11 +68,22 @@ let Body = ()=>{
          }}
           
           >Search</button>
-         
+          </div>
+          <div className="filterBtn">
+
        <button className=" bg-cyan-300 px-3 py-1 rounded-lg mx-10 my-3" 
        onClick={filterTopRated}>Top Rated Restaurant
        </button>
-        </div> 
+          </div>
+
+       <div className="flex items-center">
+        <label>UserName: </label>
+        <input className="border border-black px-2 mx-3" 
+        value={loginDetails}
+          onChange={(e)=>setUserName(e.target.value)}
+        />
+        </div>
+        
          
         
         </div>

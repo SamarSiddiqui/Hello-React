@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom/client"
 import Header from "./Header"
 import Body from "./Body"
@@ -8,16 +8,31 @@ import Contact from "./Contact"
 import Error from "./Error"
 import ResMenu from "./RestaurantMenu"
 import { lazy, Suspense } from "react"
- 
+ import UserContext from "../utils/UserContext"
 const Grocery = lazy(()=>import("./Grocery"))
+//AuthenticationCode
 
 const AppLayout = ()=>{
- return <div className=" w-full h-full">
+  let [userName,setUserName] = useState()
+
+  useEffect(()=>{
+   //We will make An Api call
+    let userData = {
+      name: "Amir Ali"
+    }
+    setUserName(userData.name)
+  },[])
+  
+ return (
+   
+   <UserContext.Provider value={{loginDetails:userName,setUserName}}>
+ <div className=" w-full h-full">
       <Header />
+     
       <Outlet />
-      <h1>Hello💕</h1>
     </div>
-}
+  </UserContext.Provider>
+)}
 
 let appRouter = createBrowserRouter([
   {

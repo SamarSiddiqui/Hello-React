@@ -52,7 +52,7 @@
 .filter{
     display: flex;
     border: 2px solid gold;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .filter-btn{
