@@ -1,6 +1,6 @@
 import React from "react";
 import { json } from "react-router-dom";
-
+import UserContext from "../utils/UserContext";
 class UserClass extends React.Component{
     constructor(props) {
         super(props)
@@ -33,7 +33,9 @@ class UserClass extends React.Component{
             <>   
          
             <h2>Id: {id}</h2>
-            <h2>name: {login}</h2>
+            <h2>Name: <UserContext.Consumer>
+                {(data)=>data.loginDetails}
+                </UserContext.Consumer></h2>
             <h2>Location: {location}</h2>
             <h2>User Bio: {bio}</h2>
             <h3>Location:Lucknow</h3>

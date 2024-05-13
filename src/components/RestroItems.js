@@ -1,9 +1,12 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestroMenuItem  = ({data,showItems,index}) => {
+const RestroMenuItem  = ({data,showItems,setShowIndex}) => {
     const handleClick = ()=> {
         // setAddItems(!showItems)
+        setShowIndex()
+
+        
     }
     return (
         <div className="w-4/5 my-3 mx-auto shadow-xl">

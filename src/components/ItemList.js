@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Img_Url } from "../utils/constants";
 
+
 const ItemList = ({ items }) => {
-  return (
+  
+  return ( 
     <div>
       {items.map((item) => (
         <div className="itemCard" key={item.card.info.id}>

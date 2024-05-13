@@ -5,14 +5,17 @@ import useRestroMenu from "../utils/useRestroMenu";
 import RestroMenuItem from "./RestroItems";
 import { useState } from "react";
 
+
 const RestaurantMenu = () => {
   const { resId } = useParams();
 
+  
   let resInfo = useRestroMenu(resId);
 
  
 
   const [showIndex,setShowIndex] = useState(null)
+
   if (resInfo === null) return <Shimmmer />;
 
   const {
@@ -21,8 +24,6 @@ const RestaurantMenu = () => {
     costForTwoMessage,
     locality,
     totalRatingsString,
-    city,
-    avgRating,
     sla,
     feeDetails,
     cloudinaryImageId,
@@ -37,7 +38,7 @@ const RestaurantMenu = () => {
         category.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
+ 
   return (
     <div className="border-8 text-center">
       <div className="w-4/12 h-40 my-4 mx-4 mt-1 absolute">
@@ -72,7 +73,8 @@ const RestaurantMenu = () => {
           <RestroMenuItem
             data={category?.card?.card}
             key={index}
-            showItems={index === showIndex ? true : false}
+            showItems={index=== showIndex ? true : false}
+            setShowIndex = {()=> setShowIndex(index)}
           />
         ))}
       </div>
