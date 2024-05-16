@@ -165,6 +165,39 @@ and some of more cool features of Parcel are:
 A: gitignore file tells Git which files to ignore when committing your project to the GitHub repository. gitignore is located in the root directory of your repo. / will ignore directories with the name.
 
 In our code we shouldn't add the files, which we can re-generate in future e.g, `node_modules`, `dist` etc.
+
+
+
+## Q: What is the difference between `package.json` and `package-lock.json` files?
+
+A: Both of these files have the same format, and perform similar functions in the root of a project. The difference is that `package-lock. json` cannot be published, and it will be ignored if found in any place other than the root project.
+
+The package. json is used for more than dependencies - like defining project properties, description, author & license information, scripts, etc. The package-lock. json is solely used to lock dependencies to a specific version number.
+
+## Q: Why should I not modify `package-lock.json`?
+
+A: It is a generated file and is not designed to be manually edited. Its purpose is to track the entire tree of dependencies (including dependencies of dependencies) and the exact version of each dependency. You should commit `package-lock.json` to your code repository
+
+You should avoid updating the `package.json` manually since it could break the synchronization between `package.json` and `package-lock. json`.
+
+## Q: What is `node_modules`? Is it a good idea to push that on git?
+
+A: The `node_modules` folder contains generated code. This is not code you've written and you should never make any updates to the files inside Node modules because there's a pretty good chance they'll get overwritten next time you install some modules.
+
+It is better to not commit the `node_modules` folder, and instead add it to your `.gitignore` file.
+
+Here are all the reasons why you shouldn't commit it: The node_modules folder has a massive size (up to Gigabytes). It is easy to recreate the node_modules folder via packages. json
+
+## Q: What is the `dist` folder?
+
+A: The `/dist` stands for distributable. The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications.
+
+Parcel's default directory for your output is named dist . The --dist-dir public tag defines the output folder for your production files and is named public to avoid confusion with the dist default directory.
+
+## Q: What is `browserlists`?
+
+A: Browserslist defines and shares the list of target browsers between various frontend build tools.
+
 ------------------------------
 ### - Two types of Import And Export
 
