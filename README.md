@@ -198,6 +198,42 @@ Parcel's default directory for your output is named dist . The --dist-dir public
 
 A: Browserslist defines and shares the list of target browsers between various frontend build tools.
 
+
+## Q: What is `JSX`?
+
+A: JSX stands for JavaScript XML.
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
+JSX makes it easier to write and add HTML in React.
+JSX converts HTML tags into react elements.
+
+### Example 1 using JSX:
+
+```
+const myElement = <h1>I Love JSX!</h1>;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+```
+
+### Example 2 Without JSX:
+
+```
+const myElement = React.createElement('h1', {}, 'I do not use JSX!');
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+```
+
+## Q: Superpowers of `JSX`.
+
+A: Using JSX, you can write markup inside Javascript, providing you with a superpower to write logic and markup of a component inside a single .jsx file. JSX is easy to maintain and debug.
+
+### Example
+
+```
+function greeting(user) {
+//JSX
+  return <h1>{user}, How are you!!!</h1>;
+}
+```
 ------------------------------
 ### - Two types of Import And Export
 
