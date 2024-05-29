@@ -233,7 +233,7 @@ function greeting(user) {
 //JSX
   return <h1>{user}, How are you!!!</h1>;
 }
-```
+```K
 ------------------------------
 ### - Two types of Import And Export
 

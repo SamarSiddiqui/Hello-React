@@ -6,6 +6,7 @@ import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom"
 import { About } from "./About"
 import Contact from "./Contact"
 import Error from "./Error"
+import Cart from "./Cart"
 import ResMenu from "./RestaurantMenu"
 import { lazy, Suspense } from "react"
  import UserContext from "../utils/UserContext"
@@ -18,7 +19,7 @@ const AppLayout = ()=>{
   useEffect(()=>{
    //We will make An Api call
     let userData = {
-      name: "Amir Ali"
+      name: "Samar"
     }
     setUserName(userData.name)
   },[])
@@ -30,7 +31,7 @@ const AppLayout = ()=>{
       <Header />
      
       <Outlet />
-    </div>
+    </div> 
   </UserContext.Provider>
 )}
 
@@ -58,6 +59,10 @@ let appRouter = createBrowserRouter([
       { 
         path:"restaurants/:resId",
         element: <ResMenu />
+      },
+      {
+        path:"/cart",
+        element: <Cart />
       }
     ],
     errorElement: <Error />

@@ -24,7 +24,7 @@ let Header = ()=>{
            <li className="py-4 px-3   font-bolder text-lg"><Link to="/">Home</Link></li>
            <li className="py-4 px-3   font-bolder text-lg"><Link to="/about">About</Link></li>
            <li className="py-4 px-3   font-bolder text-lg"><Link to="/contact">Contact</Link></li>
-           <li className="py-4 px-3   font-bolder text-lg">Cart</li>
+           <li className="py-4 px-3   font-bolder text-lg"><Link to="/cart">Cart</Link></li>
            <li className="py-4 px-3   font-bolder text-lg">
             <button className=" bg-pink-300" style={{padding:"10px 20px"}}
             onClick={()=>{
